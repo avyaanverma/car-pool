@@ -9,18 +9,20 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
-  --transition-speed: 600ms;
+  --transition-speed: 450ms;
 }
 /* to change the scroll bar  */
 body::-webkit-scrollbar{
-    width: 0.25rem;
+    height: 0.25rem;              /* height of horizontal scrollbar ← You're missing this */
+
+    width: 0.5rem;
 }
 body::-webkit-scrollbar-track{
     background: #1e1e24;
     
 }
 body::-webkit-scrollbar-thumb{
-    background: #a249ea;
+    background: #e7b24f;
     border-radius: 100%;
 
 }
@@ -32,10 +34,12 @@ body{
 }
 main{
     margin-left: 8rem;
+    margin-right: 0;
     padding: 1rem;
 }
 .navbar{
-    background-color: #6949ea;
+    background-color: #ac814d;
+    
     margin: 0;
     padding: 0.25rem;
     margin-left: 0;
@@ -63,10 +67,12 @@ main{
 }
 .nav-item{
     width: 100%;
+    padding: 0.25rem;
     filter: grayscale(100%) opacity(0.5);
 }
 .nav-item span{
-    width: 100%;   
+    width: 100%; 
+    color: white;  
 }
 .nav-link{
     text-decoration: none;
@@ -105,14 +111,48 @@ main{
 
 .navbar:hover .link-text{
     display: block;
+    transition: display 1000ms ease-in;
 }
 .nav-item:hover{
     filter: grayscale(0%) opacity(1);
     padding: 1px;
-    background-color: #633ff1;
-    transition: padding 150ms ease;
+    background-color: #e08f25;
+    transition: padding var(--transition-speed) ease;
 
+}
+.navbar:hover .logo {
+    text-align: right;
+    transition: text-align 600ms ease;
 }
 h1{
     font-size: 3rem;
 }
+
+
+.front{
+    height: 80vh;
+    width: 100vw;
+    margin-left: 5rem;
+    border: solid 1px ;
+    background-image: url(https://images.unsplash.com/photo-1530375323520-248ebdaa967f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo{
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #633ff1;
+    text-align: center;
+
+}
+.logo svg{
+    transform: rotate(0deg);
+    transition: transform 900ms;
+
+}
+.navbar:hover .logo svg{
+    transform: rotate(-540deg);
+}
+
