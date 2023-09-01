@@ -35,14 +35,7 @@ body::-webkit-scrollbar-thumb{
 body{
     margin: 0;
     padding: 0px;
-    overflow-x: hidden;
-}
-main{
-    margin-left: 8rem;
-    margin-right: 0;
-    padding: 1rem;
-    color: white;
-    background-color: #1e1e24;
+    /* overflow-x: hidden; */
 }
 .navbar{
     background-color: #ac814d;
@@ -160,17 +153,29 @@ h1{
     position: relative;
 }
 .cover-main{
+    margin-left: 8rem;
+    margin-right: 0;
     
-    height: 100vh;
+    color: white;
+    background-color: #1e1e24;
+
+    height: fit-content;
     width: 100vw;
+
     margin-left: 0;
-    padding-left: 5rem;
+    padding: 5rem;
+
     display: flex;
     flex-direction: column;
     gap: 10rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+@media only screen and (max-width: 800px) {
+    .cover-main{
+        flex-direction: row;
+    }
 }
 .cover-second{
     background-color: #AE08F7;
@@ -200,6 +205,8 @@ h1{
 }
 .cover-third{
     position: relative;
+    height: fit-content;
+
 }
 .cover-main .wave  .shape-fill{
     fill: #141418;
@@ -258,6 +265,14 @@ h1{
     align-items: center;
     
     gap: 1rem;
+}
+@media only screen and (max-width: 800px) {
+    .cover-main {
+        height: 150vh;
+    }
+    .cover-main form {
+        height: 100vh;
+    }
 }
 
 .button{
@@ -376,7 +391,7 @@ h1{
 
 /* footer css  */
 
-.footer{
+footer{
     
     background-color: #4C3D3D;
     color: #DAFFFB;
@@ -388,7 +403,7 @@ h1{
     color: #ffffff;
     text-shadow: 2px 2px 1px #001C30;
     /* padding: 20px; */
-    background-color: #352929;
+    
     text-transform: uppercase;
     color: #DAFFFB;
     box-shadow: 3px 8px 5px #2f1e1e;
@@ -409,9 +424,7 @@ h1{
 {
     width: 25px; 
 }
-.aicons{
 
-}
 .icons:hover{
     width: 30px;
 }
@@ -429,9 +442,56 @@ h1{
     text-decoration: none;
     color: #a1bdc0;
 }
+
+/* logo in sidebar */
 .logo{
     width: 83px;
     height: 77px;
     box-shadow: 2px 2px 1px;
     mix-blend-mode: darken;
+}
+
+
+/* TESTIMONIALS SECTION  */
+.hero{
+    padding: 15rem;
+    /* padding-left: 25rem; */
+    /* display: flex; */
+    /* flex-direction: row; */
+}
+.hero h1{
+    margin-bottom: 5rem;
+}
+.user-text h3 {
+    
+    font-size: 1.8rem;
+}
+.slide-row{
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+}
+.slide-col{
+    border: solid 1px white;
+    
+    display: flex;
+    border-radius: 10px;
+    
+}
+
+.user-text{
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: #AE08F7;
+    z-index: 2;
+    transform: translateY(-20%) translateX(1%);
+    /* background-color: white;  */
+    
+    
+}
+.user-text  p{
+    margin-bottom: 4rem;
+}
+.user-img img   {
+    border-radius: 20px;
 }
