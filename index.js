@@ -2,21 +2,23 @@ import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { log } from "console";
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
 
 const userSchema = new mongoose.Schema ({
-    email: String,
-    mobile: String,
-    password: String,
-    googleId: String,
-    paid: Boolean
+    name: String,
+    phoneno: String,
+    from: String,
+    to: String,
+    seatswanted: Number,
+
+
   });
 const User = new mongoose.model("User", userSchema); 
-mongoose.connect('mongodb+srv://jj:1Million$@cluster0.msnztf8.mongodb.net/Customer?retryWrites=true&w=majority').then(console.log("connected"));
+mongoose.connect('mongodb+srv://jj:1Million$@cluster0.msnztf8.mongodb.net/avyaan?retryWrites=true&w=majority').then(console.log("connected"));
 
 
 
