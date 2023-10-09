@@ -38,7 +38,7 @@ body{
     overflow-x: hidden;
 }
 .navbar{
-    background-color: #d544d5;
+    background-color: #7223f0;
     
     margin: 0;
     padding: 0.25rem;
@@ -112,7 +112,7 @@ body{
 
 .navbar:hover .link-text{
     display: block;
-    transition: display 1000ms ease-in;
+    transition: display 500ms ease-in;
 }
 .nav-item:hover{
     filter: grayscale(0%) opacity(1);

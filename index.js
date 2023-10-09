@@ -81,12 +81,13 @@ app.post('/adduser',  (req,res) =>{
 
 
 app.get("/view" , async(req,res)=>{
-const jj = await User.find({phoneno : AV});
+const jj = await User.findOne({phoneno : AV});
  if(jj.length === 0){
   res.redirect("/choose");
  }
-// jj[0] is the user object not any array..........
-  res.render('view',{ user: jj[0] });
+ console.log(jj);
+ // jj[0] is the user object not any array..........
+  // res.render('view',{ user: jj[0] });
  
 })
 
