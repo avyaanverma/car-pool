@@ -1,9 +1,12 @@
 .container{
-    margin: 100px;
+    margin: 50px;
     text-align: center;
-    background-color: #3c00a0 ;
+    background-color: aqua;
     color: black;
     height: 40vh;
+<<<<<<< Updated upstream
+    padding: 10%;
+=======
     padding: 10px 60px 70px;
     align-items: center;
     top: 50%;
@@ -28,4 +31,6 @@
     background-color: #eaeeae;
     border: 0px;
     outline: 0px;
+    background-color: ;
+>>>>>>> Stashed changes
 }
