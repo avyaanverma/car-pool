@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema ({
 
   });
 const User = new mongoose.model("User", userSchema); 
-mongoose.connect('mongodb+srv://jj:1Million$@cluster0.msnztf8.mongodb.net/avyaan?retryWrites=true&w=majority').then(console.log("connected"));
+mongoose.connect('mongodb+srv://test12345:test12345@users.h857156.mongodb.net/').then(console.log("connected"));
 
 
 
@@ -59,16 +59,16 @@ app.post('/adduser',  (req,res) =>{
     "phoneno": req.body.phoneno,
     "from": req.body.from,
     "to": req.body.to,
-    "seats": req.body.seatswanted,
+    "seats": req.body.seats,
     "date":Date.now().toString(),
   }
  // here..........................................................
  User.insertMany({ 
         name: req.body.name,
         phoneno:req.body.phoneno,
-      from: req.body.from,
-    to: req.body.to,
-    date:Date.now().toString()
+        from: req.body.from,
+      to: req.body.to,
+      date:Date.now().toString()
         });
 
 
