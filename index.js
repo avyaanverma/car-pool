@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema ({
     from: String,
     to: String,
     seatswanted: Number,
-
+    
 
   });
 const User = new mongoose.model("User", userSchema); 
@@ -59,6 +59,7 @@ app.post('/adduser',  (req,res) =>{
     "phoneno": req.body.phoneno,
     "from": req.body.from,
     "to": req.body.to,
+    "seats": req.body.seatswanted,
     "date":Date.now().toString(),
   }
  // here..........................................................
@@ -81,11 +82,13 @@ app.post('/adduser',  (req,res) =>{
 
 
 app.get("/view" , async(req,res)=>{
-const jj = await User.findOne({phoneno : AV});
- if(jj.length === 0){
-  res.redirect("/choose");
- }
- console.log(jj);
+
+  const jj = await User.findOne({phoneno : AV});
+  if(jj.length === 0){
+    res.redirect("/choose");
+  }
+  console.log(jj);
+  res.render('view');
  // jj[0] is the user object not any array..........
   // res.render('view',{ user: jj[0] });
  

@@ -1,0 +1,56 @@
+.table-bg{
+    width: 100%;
+    height: 100vh;
+    background-image:url("/images/carvan.jpg");
+    background-position: center;
+    position: relative;
+    filter: blur(6px);
+  
+  
+  
+    
+}
+
+.table{
+    background-color: rgba(0, 0, 0, 0.4); /* Black partially transparent background */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+.th{
+    padding: 10px;
+}
+
+.header{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.aksh{
+    border-spacing: 45px;
+}
+
+
+.join-btn{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    cursor: pointer;
+}
